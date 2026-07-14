@@ -6,44 +6,18 @@ st.set_page_config(
     page_icon="🎃",
     layout="wide"
 )
+st.write("最新バージョン確認")
 
 st.markdown("""
 <style>
 
-.stApp{
-    background: linear-gradient(135deg, ##E6C1CE,#CEE6C1);
-}
-
-/* ガラス風カード */
-.news-card{
-    background: rgba(255,255,255,0.35);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-        
-    border-radius:20px;
-    padding:20px;
-    margin-bottom:20px;
-    border:1px solid rgba(255,255,255,0.4);
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}         
-
-.news-button{
-    display:inline-black;
-    margin-top:15px;
-    padding:10px 16px;
-    background:#8CBF7F;
-    corlor:white !important;
-    text-decoration:none;
-    border-radius:10px
-    font-weight:bold;
-}                                              
-
-.news-button:hover{
-    background:#6EA866;
+.stApp {
+    background: red !important;
 }
 
 </style>
 """, unsafe_allow_html=True)
+
 
 st.title("Today's AI News")
 st.write("最新のAIニュースを自動取得しています")
@@ -60,7 +34,7 @@ for i, article in enumerate(feed.entries[:10]):
         <h3>🤍 {article.title}</h3>
         <p>📅 {article.published}</p>
         <p>Google News</p>
-        <a href="{article}" target="_blank" class="news-button">
+        <a href="{article.link}" target="_blank" class="news-button">
         記事を見る →
         </a>
 
