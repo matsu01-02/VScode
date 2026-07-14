@@ -14,9 +14,10 @@ h1{
     color:red !important;
 }
 
-/* 背景 */
-[.stApp {
-    background: linear-gradient(135deg, #E6C1CE 0%, #CEE6C1 100%);
+/* 背景 */ 
+[data-testid="stAppViewContainer"] > .main { 
+    background: linear-gradient(135deg, #E6C1CE, #CEE6C1); 
+    min-height: 100vh; 
 }
 
 
