@@ -10,35 +10,36 @@ st.write("最新バージョン確認")
 
 st.markdown("""
 <style>
-h1{
-    color:red !important;
-}
 
 /* 背景 */ 
-[data-testid="stAppViewContainer"] > .main { 
-    background: linear-gradient(135deg, #E6C1CE, #CEE6C1); 
-    min-height: 100vh; 
+.stApp {
+    background: linear-gradient(135deg, #E6C1CE, #CEE6C1) !important;
 }
 
 
 /* ヘッダーを透明に */
 [data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
+    background: transparent;
 }
 
 /* ツールバーを透明に */
-[data-testid="stToolbar"]{
-    right:2rem;
+[data-testid="stToolbar"] {
+    background: transparent;
 }
 
 
 /* ガラス風カード */
 .news-card{
-    background:white;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
     border-radius:20px;
     padding:20px;
     margin-bottom:20px;
-}        
+    border:1px solid rgba(255,255,255,0.4);
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}       
 
 .news-button{
     display:inline-block;
